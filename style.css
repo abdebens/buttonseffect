@@ -1,0 +1,151 @@
+body{
+    background-color: blueviolet;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+button{
+    width: 150px;
+    height: 80px;
+    color: orangered;
+    border: none;
+    background-color: transparent;
+    margin: 20px;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.one{
+    border: 3px solid orangered;
+    transition: all .3s ease;
+}
+.one:hover{
+    background-color: orangered;
+    color: #fff;
+}
+
+
+.two{
+    position: relative;
+}
+
+.two::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: orangered;
+    transition-duration: .4s;
+
+}
+.two::before{
+
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0%;
+    height: 2px;
+    background-color: orangered;
+    transition-duration: .4s;
+
+}
+.two:hover::after,
+.two:hover:before{
+
+width: 100%;
+
+}
+
+.three{
+
+    position: relative;
+
+}
+.three:after{
+
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0%;
+    height: 0%;
+    background-color: orangered;
+    transition-duration: .4s;
+    z-index: -1;
+
+}
+
+.three:before{
+
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0%;
+    height: 0;;
+    background-color: orangered;
+    transition-duration: .4s;
+    z-index: -1;
+
+}
+.three:hover::after,
+.three:hover:before{
+
+width: 100%;
+background-color: orangered;
+height: 100%;
+
+}
+
+.three:hover{
+    color: #fff;
+}
+
+.four{
+    position: relative;
+    transition: all .4s ease-in-out;
+
+}
+.four::after{
+
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1%;
+    height: 100%;
+    background-color: orangered;
+    transition-duration: .4s;
+    z-index: -1;
+    transition: all .4s ease-in-out;
+
+}
+
+.four:hover{
+  color: #fff;
+}
+.four:hover::after{
+    width: 100%;
+}
+
+.five{
+
+    display: inline-block;
+    color: orangered;
+    font-size: 1.5rem;
+    text-decoration: none;
+    margin: 20px;
+    font-weight: bold;
+    padding: 1rem 2rem;
+    text-transform: uppercase;
+    transition: all .4s ease-in;
+    background-image: linear-gradient(120deg, #fff0 0%, #fff0 50% , #fff 50%);
+    background-size: 270%;
+}
+.five:hover
+{
+    color: red;
+    background-position: 100%;
+}
